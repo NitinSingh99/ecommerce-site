@@ -1,0 +1,730 @@
+* {
+  box-sizing: border-box;
+  /* margin: 0;
+  padding: 0; */
+  
+}
+body {
+  /* background-color: black; */
+  margin: 0;
+  padding: 0;
+  user-select: none;
+}
+
+.hd-btn {
+  background: none;
+  margin: 0;
+  padding: 0;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.sk-logo {
+  height: 3.3rem;
+}
+
+.nav-container {
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 95%;
+  height: 6rem;
+}
+
+.nav {
+  width: 40%;
+  display: flex;
+}
+
+.head-right-links {
+  display: flex;
+  justify-content: flex-end;
+  text-align: left;
+  width: 40%;
+  gap: 10px;
+}
+
+.head-right-links > button {
+  margin-right: 0;
+}
+
+.hd-sr-bar {
+  display: flex;
+  gap: 10px;
+}
+
+.hd-sr-bar > input {
+  font-size: 1rem;
+  background: none;
+  border: none;
+}
+.hd-sr-bar > input:focus {
+  outline: none;
+}
+
+.hero1-hr {
+  width: 95%;
+  height: 0.1px;
+}
+
+.hd-li {
+  width: 100%;
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  color: white;
+}
+
+.secondary-nav {
+  width: 95%;
+  margin: auto;
+  margin-top: 1.6%;
+}
+
+.hd-lk {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+  font-size: 1.2rem;
+}
+
+.hero {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+#video-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.header-container {
+  position: relative;
+  z-index: 1;
+}
+
+.on-hero {
+  position: relative;
+  z-index: 1;
+  height: 70vh;
+}
+
+.txt {
+  font-weight: 300;
+  font-size: 5rem;
+  font-family: "Space Grotesk", sans-serif;
+  line-height: 113.9%;
+  display: inline-block;
+  position: absolute;
+  left: 150px;
+  top: 80px;
+  color: white;
+}
+.arrow {
+  position: absolute;
+  right: 245px;
+  top: 112px;
+}
+
+#inp::placeholder {
+  color: white;
+}
+
+/* hamburger css */
+
+.hamburger {
+  position: relative;
+  display: block;
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
+  appearance: none;
+  background: none;
+  outline: none;
+  border: none;
+  z-index: 100;
+  margin-top: 10px;
+}
+
+.hamburger .bar,
+.hamburger:after,
+.hamburger:before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 3px;
+  background-color: white;
+  margin: 4px 6px;
+  transition: 0.4s;
+}
+
+.hamburger.is-active:before {
+  background-color: black;
+  transform: rotate(-45deg) translate(-8px, 0px);
+}
+
+.hamburger.is-active:after {
+  background-color: black;
+  transform: rotate(45deg) translate(-9px, -2px);
+}
+
+.hamburger.is-active .bar {
+  opacity: 0;
+}
+
+/* menu css */
+
+.mobile-nav {
+  position: fixed;
+  top: 0;
+  right: 100%;
+  width: 80%;
+  min-height: 100vh;
+  display: block;
+  z-index: 99;
+  background-color: rgba(245, 245, 245);
+  padding-top: 60px;
+  transition: 0.4s;
+}
+
+.mobile-nav *{
+  margin: 0;
+}
+
+.mobile-nav.is-active {
+  right: 20%;
+}
+
+.mobile-nav a{
+  text-decoration: none;
+}
+
+.mobile-nav h6{
+  font-weight: 100;
+  font-size: 1.1rem;
+  font-family: "Montserrat", sans-serif;
+}
+.mobile-nav div{
+  width: 89%;
+  margin: 0px auto;
+  padding: 10px 0;
+}
+
+.mobile-nav ul, .mobile-nav a{
+  text-decoration: none;
+  list-style: none;
+  color: #000;
+}
+
+.mnav-sub-section li{
+  padding: 10px 0px;
+
+}
+
+ul.mnav-sub-section{
+  padding: 0px 0px 0px 7px; 
+}
+
+.mnav-sub-section {
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease-in-out,opacity 0.4s ease-in-out; 
+}
+
+.mnav-sub-section.active {
+  opacity: 1;
+  max-height: 300px;
+  transition: max-height 0.4s ease-in-out, opacity 0.4s ease-in-out;
+}
+
+.mobile-nav a:hover {
+  background-color: #10071f;
+}
+
+/* draggable section css */
+
+.scroll-container {
+  margin: 3% 0%;
+}
+
+.item {
+  display: inline-block;
+  margin-left: 8%;
+}
+.menu-link {
+  display: inline-block;
+}
+
+.menu-txt {
+  text-align: center;
+  margin: 0;
+  font-size: 1rem;
+}
+#draggable-section {
+  overflow-x: hidden;
+  white-space: nowrap;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* chamaleon section CSS */
+
+.hero2 {
+  background-image: url("./assets/chamaleon_cropped.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100%;
+  height: 759px;
+  position: relative;
+}
+
+.front-img {
+  width: 100%;
+  height: 45%;
+  position: absolute;
+  top: 34%;
+  background: rgba(247, 247, 247, 0.01);
+  box-shadow: -61.86666px 61.86666px 61.86666px 0px rgba(255, 255, 255, 0.03)
+      inset,
+    61.86666px -61.86666px 61.86666px 0px rgba(188, 188, 188, 0.03) inset;
+  backdrop-filter: blur(33.40800094604492px);
+}
+
+.hero2-txt {
+  display: inline-block;
+  position: absolute;
+  left: 154px;
+  top: 68px;
+}
+
+.hero2-txt h1 {
+  color: #ffffff;
+  font-family: Space Grotesk;
+  font-size: 2rem;
+  font-style: normal;
+  font-weight: 1;
+  line-height: 113.9%;
+  margin: 0;
+}
+
+.hero2-txt span {
+  font-weight: 700;
+}
+
+.hero2-txt hr {
+  width: 19%;
+  background-color: white;
+  height: 3px;
+  border: 1px solid white;
+  border-radius: 4px;
+  margin-left: 0;
+  margin-top: 10px;
+}
+
+.front-img button {
+  background: white;
+  margin: 0;
+  padding: 0;
+  border: none;
+  cursor: pointer;
+  color: #666;
+  width: 264px;
+  height: 64px;
+  font-family: Montserrat;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 113.9%;
+  border-radius: 8px;
+  position: absolute;
+  right: 218px;
+  top: 116px;
+}
+.front-img button span {
+  position: relative;
+  left: 20px;
+  top: 12px;
+}
+
+.chk-it-out {
+  display: inline-block;
+}
+
+/* products css */
+
+.prdct-hd {
+  text-align: center;
+  color: #040404;
+  font-family: Space Grotesk;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 113.9%; /* 27.336px */
+  margin-top: 45px;
+  margin-bottom: 45px;
+}
+.prdct-hd span {
+  color: #040404;
+  font-family: Space Grotesk;
+  font-size: 24px;
+  font-style: normal;
+  line-height: 113.9%;
+  font-weight: 800;
+}
+
+.products {
+  width: 90%;
+  margin: auto;
+  margin-bottom: 70px;
+
+  display: flex;
+  gap: 63.5px;
+  flex-wrap: wrap;
+}
+
+.tshirt {
+  display: inline-block;
+  max-width: 292px;
+  white-space: normal;
+  overflow-wrap: break-word;
+}
+
+.tshirt p {
+  color: #000;
+  font-family: Space Grotesk;
+  font-size: 16.957px;
+  font-weight: 500;
+  line-height: 113.9%;
+  margin-bottom: 0;
+  text-align: center;
+}
+
+.pricing {
+  margin-top: 5px;
+}
+
+.tshirt a {
+  cursor: pointer;
+}
+
+.tshirt-price {
+  font-weight: 600;
+}
+
+.tshirt-discount {
+  font-size: 14px;
+  text-decoration: line-through;
+  margin-left: 4px;
+}
+
+.size-li {
+  list-style: none;
+  display: flex;
+  gap: 10px 40px;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 0;
+  width: 100%;
+}
+
+.sizes button {
+  border: none;
+  background-color: #d9d9d9;
+  border-radius: 15px;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.cart-btn {
+  font-family: Space Grotesk;
+  font-size: 16.957px;
+  color: #f4f4f4;
+  border: none;
+  width: 100%;
+  height: 48px;
+  background-color: #1282ea;
+  border-radius: 10.1px;
+  cursor: pointer;
+}
+
+/* features(free shiping etc) */
+
+.features {
+  margin: 75px 0px;
+  display: flex;
+  gap: 140px;
+  justify-content: center;
+}
+
+.ftr {
+  /* display: inline-block; */
+  text-align: center;
+}
+
+.ftr svg {
+  display: block;
+  margin: auto;
+}
+
+.ftr-hd {
+  color: #000;
+  font-family: Space Grotesk;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  margin-top: 0;
+}
+
+.social {
+  background-image: url("./assets/joinCommunityBg.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100%;
+  height: 246px;
+  position: relative;
+}
+
+.scl-cntnt {
+  width: 80%;
+  height: 100%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.scl-hd {
+  color: #f4f4f4;
+  font-family: Space Grotesk;
+  font-size: 48px;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.scl-t {
+  color: #fff;
+  font-family: sans-serif;
+  font-size: 13.66px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 113.9%;
+  margin: 10px 0px;
+}
+
+.scl-fam {
+  color: #f4f4f4;
+  font-family: Montserrat, sans-serif;
+  font-size: 32px;
+  font-style: italic;
+  font-weight: 700;
+  line-height: 113.9%;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+/* image grid css */
+
+.gallery-img {
+  margin: 0;
+  padding: 0;
+  width: 25%;
+  height: 25%;
+}
+
+.glry1 {
+  width: 100%;
+  margin-bottom: -5px;
+}
+
+/* footer css */
+
+footer {
+  margin-bottom: 35px;
+  font-family: "Montserrat", sans-serif;
+}
+
+.ftr-flx {
+  display: flex;
+  /* gap: 10px 20px; */
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.ftr-flx > * {
+  flex: 1; /* Equal width for all flex items */
+  margin: 0 30px; /* Horizontal spacing between items */
+  
+}
+
+.ftr-lnk {
+  text-decoration: none;
+  color: #000;
+  background-color: transparent;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+
+.policies {
+  display: flex;
+  flex-direction: column;
+}
+
+.ftr-flx .follow-us{
+  align-self: flex-start;
+}
+
+.follow-us div svg {
+  color: #000;
+}
+
+.about-us p {
+  font-size: 15px;
+  margin-bottom: 10px;
+}
+.about-us a {
+  margin: 0;
+}
+.svg-fill-black {
+  fill: #000;
+}
+
+.copywright {
+  margin-top: 30px;
+  width: 100%;
+  font-family: "Montserrat", sans-serif;
+  text-transform: uppercase;
+}
+
+.copywright span {
+  font-size: 15px;
+  margin-left: 190px;
+}
+
+/* adding responsiveness */
+
+@media screen and (max-width: 768px) {
+  #video-background {
+    height: 100%;
+  }
+  .sk-logo {
+    height: 3rem;
+    width: 6rem;
+  }
+
+  .nav-container {
+    height: 70vh;
+    align-items: flex-start;
+  }
+
+  .mobile-display-hidden {
+    display: none;
+  }
+
+  .scroll-container .item a img {
+    height: 6rem;
+  }
+  .scroll-container {
+    margin: 25px 0px;
+  }
+  .shopping-cart {
+    margin-top: 10px;
+  }
+
+  .hero2-txt {
+    left: 80px;
+    top: 90px;
+  }
+
+  /* products */
+
+  .products {
+    gap: 15px;
+    width: 100%;
+    justify-content: space-around;
+  }
+
+  .tshirt {
+    display: inline-block;
+    max-width: 170px;
+    text-align: center;
+    margin: 0 auto;
+    white-space: normal;
+  }
+  .prdct-hd {
+    line-height: 111%;
+    font-size: 14px;
+  }
+
+  .prdct-hd span {
+    font-weight: 600;
+    font-size: 14px;
+  }
+
+  .products {
+    margin-bottom: 30px;
+  }
+
+  .size-li {
+      gap: 10px 20px;
+  }
+
+  .tshirt a img {
+    width: 177.5px;
+    height: 265.5px;
+  }
+
+  .tshirt p,
+  .tshirt p span {
+    font-size: 0.7rem;
+  }
+
+  .tshirt p {
+    max-width: 100%;
+    white-space: normal;
+  }
+
+  .sizes button {
+    font-size: 9px;
+    padding: 6px;
+  }
+
+  .crt-btn-div {
+    width: 100%;
+    display: flex;
+  }
+
+  .cart-btn {
+    font-size: 12px;
+    width: 60%;
+    margin: auto;
+    height: 30px;
+    padding: 1px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .mobile-nav {
+    display: none;
+  }
+
+  .hamburger {
+    display: none;
+  }
+}
+
+@media (max-width: 600px){
+  .features{
+    display: none;
+  }
+}
